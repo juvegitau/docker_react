@@ -1,0 +1,14 @@
+# Specify a abase image
+FROM node:alpine
+
+WORKDIR /app
+
+# copy files
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+
+
+# Default commamd
+CMD ["npm","run","start"]
+
