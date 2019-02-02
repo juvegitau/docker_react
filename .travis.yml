@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  _ docker build -t juvegitau/docker-react -f DockerFile.dev .
+  - docker build -t juvegitau/docker-react -f DockerFile.dev .
 
 script:
   - docker run juvegitau/docker-react npm run test -- --coverage
